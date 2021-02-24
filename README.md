@@ -16,7 +16,7 @@ then after changes run these commands in project terminal
 >>python manage.py migrate
 
 #### For Creating new project
->django-admin startproject *Projectname*
+>django-admin startproject **Projectname**
 
-*And for db simply run these commands at first time*
+**And for db simply run these commands at first time**
 >python manage.py runserver 
