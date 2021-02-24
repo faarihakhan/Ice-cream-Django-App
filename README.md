@@ -1,4 +1,4 @@
-# Ice-cream-Django-App-SQLite3-dp
+# Ice-cream-Django-App-SQLite3-db
 Framework: Django
 >Backend language is python
 >>Frontend language is Html, CSS, JavaScript
