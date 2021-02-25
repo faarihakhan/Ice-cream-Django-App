@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block tilte %}Contact{% endblock tilte %}
+{% block body %}
+<div class="container-fluid px-0">
+  <img src="/static/img/contactus.jpg" class="d-block w-100" id="imm" alt=".." width="1600px" height="500px">
+  <div class="carousel-caption d-none d-md-block" id="text1">
+    <h5 dir="ltr" align="center">
+      <span style="font-size: 25pt" lang="ar-sa">Contact Us</span>
+    </h5>
+  </div>
+
+  <form method="post" action="/contact"> 
+  {% csrf_token %}
+</div>
+
+<div class="container px-2 py-4">
+  <div class="col-md-6">
+    <label for="name" class="form-label">Name</label>
+    <input type="name" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+    
+  </div>
+
+  <div class="col-md-6 py-6">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+  </div>
+
+   <div class="col-md-6 my-3">
+    <label for="phone" class="form-label">Phone number</label>
+    <input type="phone" class="form-control" id="phone"  name="phone" placeholder="Enter Your Number">
+  </div>
+
+ <div class="col-md-6 my-3">
+									<div class="form-group">
+										<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+									</div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+  
+
+  {% comment %} <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div> {% endcomment %}
+<style>
+  #text1 {
+    font-family: "Times New Roman", Times, serif, bold 12px/30px;
+
+      {
+      % comment %
+    }
+
+    position: absolute;
+
+      {
+      % endcomment %
+    }
+
+    top: 259px;
+    font-size: 700%;
+    padding-right: 6.5%;
+  }
+
+  #imm {
+    filter: brightness(50%)
+  }
+</style>
+</div>
+{% endblock body %}

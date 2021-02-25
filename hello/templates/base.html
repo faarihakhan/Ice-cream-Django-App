@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}|icecreams</title>
+
+</head>
+<style>
+    body {
+        margin: 0;
+
+        padding: 0;
+
+            {
+            % comment %
+        }
+
+        font-family: Century Gothic;
+
+            {
+            % endcomment %
+        }
+
+    }
+</style>
+
+<body>
+    <!doctype html>
+    <html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+        <title>Hello, world!</title>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">icecreams</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">About Us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/services">Ice-creams</a></li>
+                                {% comment %} <li><a class="dropdown-item" href="#">Family Pack</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Small Pack</a></li> {% endcomment %}
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact Us</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        {% comment %} {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+            <strong>{{message}}</strong>
+            <button type="submit" class="close" data-bs-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+          {% endfor %}
+        {% endif %} {% endcomment %}
+        {% if message %}
+<ul class="message">
+    {% for messages in message %}
+    <li{% if messages.tags %} class="{{ messages.tags }}"{% endif %}>{{ messages }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+        {% block body %}{% endblock body %}
+
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+    </body>
+
+    </html>
+
+</body>
+{% comment %}--------------------------------- Footer Work ------------------------- {% endcomment %}
+<!--footer starts from here-->
+<footer class="footer">
+    <div class="container bottom_border">
+        <div class="row">
+            <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                <h5 class="headin5_amrc col_white_mrc pt2">Find us</h5>
+                <!--headin5_amrc-->
+                <p class="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                    has been the industry's standard dummy text ever since the 1500s</p>
+                <p><i class="fa fa-location-arrow"></i> 9878/25 sec 9 rohini 35 </p>
+                <p><i class="fa fa-phone"></i> +91-9999878398 </p>
+                <p><i class="fa fa fa-envelope"></i> info@example.com </p>
+
+
+            </div>
+
+
+            <div class=" col-sm-4 col-md  col-6 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                <!--headin5_amrc-->
+                <ul class="footer_ul_amrc">
+                    <li><a href="http://webenlance.com">Image Rectoucing</a></li>
+                    <li><a href="http://webenlance.com">Clipping Path</a></li>
+                    <li><a href="http://webenlance.com">Hollow Man Montage</a></li>
+                    <li><a href="http://webenlance.com">Ebay & Amazon</a></li>
+                    <li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
+                    <li><a href="http://webenlance.com">Image Cropping</a></li>
+                </ul>
+                <!--footer_ul_amrc ends here-->
+            </div>
+
+
+            <div class=" col-sm-4 col-md  col-6 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
+                <!--headin5_amrc-->
+                <ul class="footer_ul_amrc">
+                    <li><a href="">Remove Background</a></li>
+                    <li><a href="">Shadows & Mirror Reflection</a></li>
+                    <li><a href="http://webenlance.com">Logo Design</a></li>
+                    <li><a href="http://webenlance.com">Vectorization</a></li>
+                    <li><a href="http://webenlance.com">Hair Masking/Clipping</a></li>
+                    <li><a href="http://webenlance.com">Image Cropping</a></li>
+                </ul>
+                <!--footer_ul_amrc ends here-->
+            </div>
+
+
+            <div class=" col-sm-4 col-md  col-12 col">
+                <h5 class="headin5_amrc col_white_amrc pt2">Follow us</h5>
+                <!--headin5_amrc ends here-->
+
+                <ul class="footer_ul2_amrc">
+                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                        <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
+                        </p>
+                    </li>
+                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                        <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
+                        </p>
+                    </li>
+                    <li><a href="#"><i class="fab fa-twitter fleft padding-right"></i> </a>
+                        <p>Lorem Ipsum is simply dummy text of the printing...<a href="#">https://www.lipsum.com/</a>
+                        </p>
+                    </li>
+                </ul>
+                <!--footer_ul2_amrc ends here-->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <ul class="foote_bottom_ul_amrc">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+        <!--foote_bottom_ul_amrc ends here-->
+        <p class="text-center">Copyright @2017 | Designed With by <a href="#">Your Company Name</a></p>
+
+        {% comment %} <ul class="social_footer_ul">
+            <li><a href="http://facebook.com"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="http://twitter.com"><i class="icon icon--twitter"></i></a></li>
+            <li><a href="http://twitter.com"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="http://instagram.com"><i class="fab fa-instagram"></i></a></li>
+        </ul> {% endcomment %}
+        <!--social_footer_ul ends here-->
+    </div>
+    <style>
+        /*footer*/
+        .col_white_amrc {
+            color: #FFF;
+        }
+
+        footer {
+            width: 100%;
+            background-color: #263238;
+            min-height: 250px;
+            padding: 10px 0px 25px 0px;
+        }
+
+        .pt2 {
+            padding-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: #CCC;
+            padding-bottom: 0px;
+            margin-bottom: 8px;
+        }
+
+        .mb10 {
+            padding-bottom: 15px;
+        }
+
+        .footer_ul_amrc {
+            margin: 0px;
+            list-style-type: none;
+            font-size: 14px;
+            padding: 0px 0px 10px 0px;
+        }
+
+        .footer_ul_amrc li {
+            padding: 0px 0px 5px 0px;
+        }
+
+        .footer_ul_amrc li a {
+            color: #CCC;
+        }
+
+        .footer_ul_amrc li a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .fleft {
+            float: left;
+        }
+
+        .padding-right {
+            padding-right: 10px;
+        }
+
+        .footer_ul2_amrc {
+            margin: 0px;
+            list-style-type: none;
+            padding: 0px;
+        }
+
+        .footer_ul2_amrc li p {
+            display: table;
+        }
+
+        .footer_ul2_amrc li a:hover {
+            text-decoration: none;
+        }
+
+        .footer_ul2_amrc li i {
+            margin-top: 5px;
+        }
+
+        .bottom_border {
+            border-bottom: 1px solid #323f45;
+            padding-bottom: 20px;
+        }
+
+        .foote_bottom_ul_amrc {
+            list-style-type: none;
+            padding: 0px;
+            display: table;
+            margin-top: 10px;
+            margin-right: auto;
+            margin-bottom: 10px;
+            margin-left: auto;
+        }
+
+        .foote_bottom_ul_amrc li {
+            display: inline;
+        }
+
+        .foote_bottom_ul_amrc li a {
+            color: #999;
+            margin: 0 12px;
+        }
+
+        .social_footer_ul {
+            display: table;
+            margin: 15px auto 0 auto;
+            list-style-type: none;
+        }
+
+        .social_footer_ul li {
+            padding-left: 20px;
+            padding-top: 10px;
+            float: left;
+        }
+
+        .social_footer_ul li a {
+            color: #CCC;
+            border: 1px solid #CCC;
+            padding: 8px;
+            border-radius: 50%;
+        }
+
+        .social_footer_ul li i {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+    </style>
+
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+</html>
